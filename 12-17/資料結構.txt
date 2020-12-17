@@ -1,0 +1,47 @@
+網頁：	登入(忘記密碼) 註冊  發文 
+	首頁 看發文(回覆 檢舉) 通知(回覆 按讚)
+	修改資料 -> 我的收藏 我的追蹤    
+	
+帳號 register
+-------------------
+accountId	varchar 8	userxxx
+accountName	varchar 12	ckh155115
+email		varchar 25	ckh155115@gmail.com
+password	varchar 15	ab151621221
+nickname	varchar 10	sioh0320
+
+貼文 poster
+-------------------
+accountName	varchar 12	
+class		varchar 12      心情
+postId		varchar 12	postxxxxxxxx
+postDate	varchar 15	
+picture		longblob 	
+title		varchar 30	
+good		int 	5	 	
+dislike		int 	5	
+context		varchar 350	
+
+會員設定 member
+-----------------------------
+(帳號)----->accountName	(X)
+(帳號)----->email 	(X)
+(帳號)----->password 	(V)
+(帳號)----->nickname 	(V)
+accountName	varchar 12
+birthday	date		出生日期    方格選
+gender		varchar 8 	性別
+introction  	varchar 300 	自我介紹	
+picture		longblob	大頭照
+收藏 文章
+追蹤 人(通知)
+
+留言 comment
+-------------------------------
+postId varchar(12) foreign key
+accountName varchar(7)
+comment_ID varchar(7)
+comment varchar(255)
+commentTime datatime
+likenum bignit(5)
+dislikenum bignit(5)

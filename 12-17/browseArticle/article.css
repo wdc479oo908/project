@@ -1,0 +1,131 @@
+body{
+  font-family:sans-serif;
+} 
+#d1{	
+	position: absolute;
+	left:0;top:0;
+	width: 100%;
+	height:60px;
+	background: #00CACA;
+}
+.butt1{
+	width: 40px;
+	height: 40px;
+	margin-top: 9px;
+	background-color: rgba(1,1,1,0);
+	border: none;
+	background-repeat:no-repeat; 
+	cursor:pointer;
+}
+.butt1:hover{
+	background: #66B3FF;
+}
+.butt1:focus{
+	outline:none;
+}
+#butt1-1{
+	position: absolute;
+	left:1350px;
+	background-image: url('pen.png');
+}
+#butt1-2{
+	position: absolute;
+	left:1400px;
+	background-image: url('bell.png');
+}
+#butt1-3{
+	position: absolute;
+	left:1450px;
+	background-image: url('uuuser.png');
+}
+#butt1-4{
+	position: absolute;
+	left:1500px;
+	width: 30px;
+	height: 30px;
+	margin-top: 18px;
+	background-image: url('down.png');
+}
+#s1{
+	position: absolute;
+	left:150px;
+	color: rgb(255,255,255);
+	line-height: 60px;
+	font-size: 24px;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+#d2 { 
+	margin-top:100px ;
+	margin-left:350px;
+	width:800px;
+	height:100%;
+	float: left;
+ 	border : 2px solid #97CBFF;
+	background-color : rgba(255,255,255,1);
+	padding: 30px; 
+	border-radius: 10px; 
+	line-height:26px;
+}
+#post_nickname,#post_accountName,#post_date{
+	line-height:32px;
+	font-size: 24px;
+}
+#post_title{
+	font-size: 30px;
+}
+#post_context{
+	font-size: 18px;
+	font-weight: 200;
+	word-wrap:break-word;
+	white-space:normal;
+}
+#d1-3{
+	position: absolute;
+	left: 1460px;
+	top: 60px;
+	width: 65px;
+	height: 100px;
+	/* border : 2px solid #97CBFF;
+	background-color : rgba(255,255,255,1);
+	text-align: center; */
+}
+#feature{
+	width: 65px;
+	background-color: white;
+	border: 1px solid 	#00AEAE;
+	border-collapse:collapse;
+	text-align: center;
+}
+table tr.feature {
+	font-size: 18px;
+	font-weight: 300;
+	background: white;
+	border: 1px solid 	#00AEAE;
+	border-collapse:collapse;
+	cursor:pointer;
+}
+
+#d3 {
+	border: 2px solid #97CBFF;
+	border-left:0px ;
+	border-right: 0px;
+	border-bottom: 0px;
+	margin-left:-30px ;
+	margin-right: -30px;
+	height: 20px;
+	
+
+}
+
+#comment{
+	width:370px;
+	height:100px;
+	font-size: 24px;
+	resize: none;
+	
+ }
+ ::-webkit-input-placeholder{
+	 font-size: 24px;
+ }

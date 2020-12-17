@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>首頁</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+</head>
+
+<body background="blue-snow.png">
+    <div id="d1">
+        <div id="d1-1"><span id="s1">海大討論區</span></div>
+        <div id="d1-2">
+            <button type="button" class="butt1" id='butt1-1' onclick="javascript:location.href='post.html'"></button>
+            <button type="button" class="butt1" id='butt1-2' ></button>
+            <button type="button" class="butt1" id='butt1-3' onclick="javascript:location.href='memberSet.html'"></button>
+            <button type="button" class="butt1" id='butt1-4'></button>
+        </div>
+    </div>
+    <div id='d1-3'>
+        <table id='feature' >
+            <tr class='feature'><td id='logout' >登出</td></tr>
+            <tr class='feature'><td id='otherFeature' >功能</td></tr>
+        </table>
+    </div>
+    <div id="d2">
+        <div id="d2-1">熱門看板</div>
+        <table id='t1' class='t1'>
+            <tr><th id='all' >所有</th></tr>
+            <tr><th id='emotion' >感情</th></tr>
+            <tr><th id='game' >電玩</th></tr>
+            <tr><th id='sport' >運動</th></tr>
+            <tr><th id='food' >美食</th></tr>
+            <tr><th id="schoolwork">課業</th></tr>
+            <tr><th id="politics">政治</th></tr>
+            <tr><th id='others' >...</th></tr>
+            </tr>
+        </table>
+    </div>
+    <div id="d3">
+        <div id="d3-1">所有看板</div>
+        <br>
+        <form action='article.html' id='form1' method="post">
+            <table id="t2" border="1" class="t2">
+            <tbody id="tbody1">
+            </tbody>
+            </table>
+        </form>
+    </div>
+    <script src='index123.js'></script>
+</body>
+
+</html>
