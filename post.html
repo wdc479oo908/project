@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>發文</title>
+    <link rel="stylesheet" href="post.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</head>
+
+<body background="blue-snow.png">
+    <div id="d1">
+        <div id="d1-1"><span id="s1"><a href="index.html" style="text-decoration:none;color: white;">海大討論區</a></span></div>
+        <div id="d1-2">
+            <input type="button" class="butt1" id='butt1-1' onclick="javascript:location.href='post.html'">
+            <input type="button" class="butt1" id='butt1-2'>
+            <input type="button" class="butt1" id='butt1-3' onclick="javascript:location.href='memberSet.html'">
+            <input type="button" class="butt1" id='butt1-4'>
+        </div>
+    </div>
+    <div id='d1-3'>
+        <table id='feature'>
+            <tr class='feature'>
+                <td id='logout'>登出</td>
+            </tr>
+            <tr class='feature'>
+                <td id='otherFeature'>功能</td>
+            </tr>
+        </table>
+    </div>
+    <div id="d2">發布文章</div>
+    <form id='form1' method="post" action="index.html">
+        <select id="sele1" required>
+            <!-- <option value="0">看板分類</option>
+            <option value="emotion">感情</option>
+            <option value="game">電玩</option>
+            <option value="sport">運動</option>
+            <option value="food">美食</option>
+            <option value="schoolwork">課業</option>
+            <option value="politics">政治</option>
+            <option value="others">其他</option> -->
+            
+            
+
+        </select>
+        <br>
+        <textarea id="title" name="title" placeholder="輸入標題" maxlength="30" required></textarea>
+        <div id='d3'>
+            <img id="img1" src="thumbnail.png">
+        </div>
+        <label id="inputImg1">上傳圖片
+            <input id="uploadImg" type="file" accept="image/*" onchange="loadFile(event)" style="display: none;">
+        </label>
+        <div id='d4'></div>
+        <br>
+        <textarea id="context" name="context" placeholder="輸入內文" maxlength="350" required></textarea>
+        <br>
+        <button type='button' id='cancel' onclick="cancelPost();">取消</button>
+        <button type='button' id='submit'>發布</button>
+    </form>
+    <script src="post.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>登入</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="jquery-3.5.1.js"></script>
+</head>
+    <body background="blue-snow.png">
+        <div id="d1">
+            <div id="d1-1"><span id="s1">海大討論區</span></div>
+        </div>
+        <form action="index.html" method="post" id="form1"  onsubmit="return(validate());">
+            <div id="d2">
+                <br><br><br><h2>登入</h2><br><br>
+                <label>輸入帳號
+                    <br><br>
+                    <input type="text" id="accountName" name="accountName" placeholder="輸入帳號"  class="ic1" required>
+                    <br><br>
+                </label>
+                <label>輸入密碼
+                    <br><br>
+                    <input type="password" id="password" name="password" placeholder="輸入密碼"  class="ic1"  required>
+                    <br><br><br>
+                </label>
+                <a href="register.html" style="text-decoration:none;"><small>馬上註冊</small></a>
+                <br><br>
+                <div>
+                    <button type='submit' id='login' class="butt1">登入</button>
+                </div> 
+                <div id='qq' style="display:none" >qq</div>
+                <br>
+                <div id='result'></div>
+            </div>
+        </form>
+        <script src="login.js"></script>
+    </body>
+</html>
