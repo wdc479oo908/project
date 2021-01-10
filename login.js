@@ -1,45 +1,37 @@
-const accountName = document.getElementById('accountName')
-const passwordInput = document.getElementById('password')
-const resultOutput = document.getElementById('result')
-const form1 = document.getElementById("form1")
-const qq = document.getElementById("qq")
+let x;
 
-function validate() {
-    resultOutput.style.color = '#00f'
-    resultOutput.innerText = 'Login..'
+$(document).ready(function() {
 
-    var name = accountName.value
-    var password = passwordInput.value
-    $.ajax({
-        url: "login_chk.php",
-        data: { accountName: name , password: password},
-        type: "POST",
-        async: false,
-        beforeSend: function() {
-            //$('#loading_div').show();
-            //beforeSend 發送請求之前會執行的函式
-        },
-        success: function(msg) {
-            if (msg == 'qq ') {
-                resultOutput.style.color = '#00f'
-                resultOutput.innerText = "登入成功!"
-                qq.innerText = 'qq2'
-            } else {
-                resultOutput.innerText = '帳號密碼輸入錯誤!';
-                resultOutput.style.color = '#f00'
-                qq.innerText = 'qq1'
-            }
-            
-        },
-        error: function(xhr) {
-            alert('Ajax request 發生錯誤');
-        },
-        complete: function() {
+    $('#login').click(function(){
+        var name = $('#accountName').val();
+        var password = $('#password').val();
+        x=0;
+       
 
-            // $('#loading_div').hide();   
-            //complete請求完成實執行的函式，不管是success或是error
-        }
-    });
-    if (qq.innerText === 'qq1') return false;
-    else return true;
-}
+         $.ajax({
+            url: "login_chk.php",
+            method: "POST",
+            data: { accountName: name ,password:password},
+            dataType: JSON.stringify(),
+            async: false,
+            //processData: false,
+            //contentType: false,
+            success: function(data) {
+                if(data=="qq ")x=1;
+                else{
+                    $('#result').text("帳號密碼輸入錯誤");
+                    $('#result').css("color","red");
+                }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+            complete: function() {}
+        })
+        //if(x)$('#form1').submit();
+
+    })
+
+});

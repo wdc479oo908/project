@@ -7,8 +7,6 @@
 
 
 
-
-
   $class = $_POST['class'];
   $sort = $_POST['sort'];
 
