@@ -1,0 +1,61 @@
+body{
+	font-family: "微軟正黑體";
+}
+#d1{
+	position: absolute;
+	left:0;top:0;
+	width: 100%;
+	height:60px;
+	background: #00CACA;
+}
+
+#s1{
+	position: absolute;
+	left:150px;
+	color: rgb(255,255,255);
+	line-height: 60px;
+	font-size: 24px;
+	font-weight: bold;
+}
+#d2 {
+    line-height: 20px;
+    letter-spacing: 2px;　 
+	font-size : 6px;
+	margin:800px ;
+	width:400px;
+	height:550px;
+	text-align : center;
+	border : 2px solid #97CBFF;
+	background-color : rgba(255,255,255,1);
+	margin-top: 100px;
+	padding: 16px;
+	border-radius: 18px;
+}
+#qq1{
+	font-size: 5px;
+}
+.ic1{
+	padding:5px 10px;
+	margin-top: 6px;
+	border:1 #BEBEBE;
+	cursor:pointer;
+	border-radius: 5px;
+}
+.butt1{
+	background: #0080FF;
+	color: rgb(255,255,255);
+	font-weight:bold;
+	font-size : 16px;
+	border-radius: 5px;
+	height: 40px;
+	width: 160px;
+}
+.butt1:hover{
+	background: #66B3FF;
+}
+.ic1:focus {
+	font size : 8px;
+	letter-spacing: 1.2px;　 
+	font-weight:550; 
+	border : 3px solid #000079;
+}
