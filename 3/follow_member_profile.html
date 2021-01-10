@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>會員設定</title>
+    <link rel="stylesheet" href="memberSet.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+</head>
+
+<body background="blue-snow.png">
+    <div id="d1">
+        <div id="d1-1"><span id="s1"><a href="index.html" style="text-decoration:none;color: white;">海大討論區</a></span></div>
+        <div id="d1-2">
+			<button type="button" class="butt1" id='butt1-0' onclick="javascript:location.href='favorite_article.html'"></button>
+            <button type="button" class="butt1" id='butt1-1' onclick="javascript:location.href='post.html'"></button>
+            <button type="button" class="butt1" id='butt1-2'></button>
+            <button type="button" class="butt1" id='butt1-3' onclick="javascript:location.href='memberSet.html'"></button>
+            <button type="button" class="butt1" id='butt1-4'></button>
+        </div>
+    </div>
+    <div id="d2">
+        <img id="img1" src="memberPicture.png">
+        <br>
+        <div id="d2-1">
+            
+                <input id="uploadImg" type="file" accept="image/*" onchange="loadFile(event)" style="display: none;">
+            
+        </div>
+        <div id='d2-2'></div>
+    </div>
+    <div id='d1-3'>
+        <table id='feature'>
+            <tr class='feature'>
+                <td id='logout'>登出</td>
+            </tr>
+            <tr class='feature'>
+                <td id='otherFeature'>功能</td>
+            </tr>
+			<tr class='feature'><td id='check'  onclick="javascript:location.href='check_article.html'">審核</td></tr>
+        </table>
+    </div>
+    <div id="d3">
+       
+        <p id='accountName'></p>
+        <p id='email'></p>
+        <label class="label1">暱稱&emsp;:&emsp;
+            <input id="nickname" type="text" class="input1">
+        </label>
+        <br>
+        <label class="label1">性別&emsp;:&emsp;
+            <select id="gender" calss="input1" style="margin-top: 30px; width: 80px;height: 25px;font-size: 16px">
+                <option value="0" selected></option>
+                <option value="male">男生</option>
+                <option value="female">女生</option>
+                <option value="others">其他?</option>
+            </select>
+        </label>
+        <br>
+        <label class="label1">出生日期&emsp;:&emsp;
+            <input id="birthday" type="date" class="input1">
+        </label>
+        <br><br>
+        <label class="label1">自我介紹&emsp;:&emsp;
+            <br>
+            <textarea id="introction" maxlength="250"></textarea>
+        </label>
+    </div>
+    <script src='memberSet.js'></script>
+</body>
+
+</html>

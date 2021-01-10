@@ -1,0 +1,94 @@
+//const d3_title = document.getElementById('d3-1');
+//const d3_2rule = document.getElementById('d3-2');
+let class1;
+let postId;
+
+$(document).ready(function() {
+	
+    function load1() {
+        $("#feature").hide();
+        $('#tbody5').html('<tr height="50px"><td width="100px">讚數</td><td width="140px">縮圖</td><td width="500px">文章</td><td width="120p" >發文者</td><td width="120px" >發文時間</td><td width="120px" class="td1">postId</td></tr>');
+        $.ajax({
+            url: "article_favorite.php",
+            method: "POST",
+            data: {},
+            dataType: JSON.stringify(),
+            async: false,
+            //processData: false,
+            //contentType: false,
+            success: function(data) {
+                //alert(data);
+                console.log(data);
+                 for (i = 0; i < data.length; i++) {
+                    
+                    let content =
+                        "<tr >" +
+                       "<td>" + data[i].class + "<br>" + "<br>" + data[i].good + "</td>" +
+                        "<td>" + "<img src = " + data[i].picture + " width=120px height=120px>" + "</td>" +
+                        "<td id=" + data[i].postId + ">" + "<b id=" + data[i].postId + ">" + data[i].title + "</b>" + "<br>" + data[i].context.substr(0, 30) + "........</td>" +
+                        "<td>" + data[i].nickname + "</td>" +
+                        "<td>" + data[i].postDate.substr(0, 10) + "</td>" +
+                        "<td class='td1'>" + data[i].postId + "</td>" +
+                        "</tr>";
+                    $("#tbody5").append(content);
+                }
+            },
+            // error: function(XMLHttpRequest, textStatus, errorThrown) {
+            //     alert(XMLHttpRequest.status);
+            //     alert(XMLHttpRequest.readyState);
+            //     alert(textStatus);
+            // },
+            complete: function() {}
+        })
+
+        
+        $(".td1").hide();
+        postId = "";
+    }
+    load1();
+	   $('#t2').click(function() {
+        let x = event.srcElement.id;
+        if (x.substr(0, 4) == "post") {
+            postId = x;
+        } else return;
+        $.ajax({
+            url: "index_chk.php",
+            data: { postId: postId },
+            type: "POST",
+            async: false,
+            beforeSend: function() {},
+            success: function(msg) {
+                //alert(msg);
+                $('#form1').submit();
+            },
+            error: function(xhr) {
+                alert('Ajax request 發生錯誤');
+            },
+            complete: function() {}
+        });
+    });
+    $('#butt1-4').click(function() {
+        $('#feature').toggle();
+    });
+    $('#feature').click(function() {
+        let feature = event.srcElement.id;
+        if(feature=='logout'){
+            $.ajax({
+                url: "logout.php",
+                data: {},
+                type: "POST",
+                async: false,
+                beforeSend: function() {},
+                success: function(msg) {
+                    //console.log(msg);
+                    window.location="/../final/login.html";
+                },
+                error: function(xhr) {
+                    alert('Ajax request 發生錯誤');
+                },
+                complete: function() {}
+            });
+        }
+       
+    });
+})

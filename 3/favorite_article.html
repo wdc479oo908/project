@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="favorite_article.css">
+    <script src="jquery-3.5.1.js"></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+    <title>收藏文章</title>
+</head>
+<body background="blue-snow.png">
+    <div id="d1">
+        <div id="d1-1"><span id="s1"><a href="index.html" style="text-decoration:none;color: white;">海大討論區</a></span></div>
+        <div id="d1-2">
+            <button type="button" class="butt1" id='butt1-0' onclick="javascript:location.href='favorite_article.html'"></button>
+			<button type="button" class="butt1" id='butt1-1' onclick="javascript:location.href='post.html'"></button>
+            <button type="button" class="butt1" id='butt1-3' onclick="javascript:location.href='memberSet.html'"></button>
+            <button type="button" class="butt1" id='butt1-4'></button>
+        </div>
+    </div>
+    <div id='d1-3'>
+        <table id='feature' >
+            <tr class='feature'><td id='logout' >登出</td></tr>
+            <tr class='feature'><td id='otherFeature' onclick="javascript:location.href='follow_member.html'">追蹤</td></tr>
+			<tr class='feature'><td id='check'  onclick="javascript:location.href='check_article.html'">審核</td></tr>
+			<tr class='feature'><td id='assign'  onclick="javascript:location.href='assign.html'">任命</td></tr>
+        </table>
+    </div>
+    <div id="d3">
+        <div id="d3-1">收藏文章</div>
+        <form action='newboard.html' method="POST" id='form3'>
+            <div id="d3-2"></div>
+        </form> 
+        <br>
+        <form action='article.php' id='form1' method="post">
+            <table id="t2" border="1" class="t2">
+            <tbody id="tbody5">
+            </tbody>
+            </table>
+        </form>
+    </div>
+    <script src='favorite_article.js'></script>
+</body>
+</html>
