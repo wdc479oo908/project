@@ -55,6 +55,25 @@ body{
 	font-weight: bold;
 	cursor:pointer;
 }
+#d1-4{
+	position: absolute;
+	top: 0px;
+	left:480px;
+	line-height: 60px;
+}
+#search{
+	padding:5px;
+	width: 600px;
+	height: 18px;
+	font-size : 16px;
+}
+#searchButton{
+	margin-left: 10px ;
+	margin-bottom: 20px: ;
+	width:60px;
+	height: 26px;
+	font-size: 16px;
+}
 #d2 { 
 	margin-top:100px ;
 	margin-left: 50px;

@@ -104,5 +104,47 @@ $(document).ready(function() {
         }
        
     });
+    $('#search').keydown(function(event){
+        if(event.which==13)$('#searchButton').click();
+    })
+    $('#searchButton').click(function() {
+        let search=$('#search').val();
+        if(search=="")return;
+        $('#tbody1').html('<tr height="50px"><td width="100px">讚數</td><td width="140px">縮圖</td><td width="500px">文章</td><td width="120p" >發文者</td><td width="120px" >發文時間</td><td width="120px" class="td1">postId</td></tr>');
+        $.ajax({
+            url: "search.php",
+            method: "POST",
+            data: { search: search ,class: class1},
+            dataType: JSON.stringify(),
+            async: false,
+            //processData: false,
+            //contentType: false,
+            success: function(data) {
+                //alert('success');
+                //console.log(data);
+                for (i = 0; i < data.length; i++) {
+                    if (data[i].picture == "picture/") data[i].picture = "thumbnail.png";
+                    if (data[i].nickname == "") data[i].nickname = "匿名";
+                    let content =
+                        "<tr >" +
+                        "<td>" + data[i].class + "<br>" + "<br>" + data[i].good + "</td>" +
+                        "<td>" + "<img src = " + data[i].picture + " width=120px height=120px>" + "</td>" +
+                        "<td id=" + data[i].postId + ">" + "<b id=" + data[i].postId + ">" + data[i].title + "</b>" + "<br>" + data[i].context.substr(0, 30) + "........</td>" +
+                        "<td>" + data[i].nickname + "</td>" +
+                        "<td>" + data[i].postDate.substr(0, 10) + "</td>" +
+                        "<td class='td1'>" + data[i].postId + "</td>" +
+                        "</tr>";
+                    $("#tbody1").append(content);
+                }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            },
+            complete: function() {}
+        })
+
+    });
 
 })
