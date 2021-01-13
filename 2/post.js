@@ -44,10 +44,11 @@ $(document).ready(function() {
         formData.append("class", $("#sele1").val());
         formData.append("title", $("#title").val());
         formData.append("context", $("#context").val());
-		formData.append("check", $("#check").val());
-		if ($('#check').prop('checked'))formData.append("check", 1);
-		else formData.append("check", 0);
-
+		//formData.append("check", $("#check").val());
+		console.log($('#checkbox1'));
+		if ($('#checkbox1').prop('checked')){formData.append("check", 1);}
+		else {formData.append("check", 0);}
+		
         for (var i = 0; i < inputLength; i++) {
             file = input[0].files[i];
             formData.append('myFile[]', file);

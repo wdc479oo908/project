@@ -9,6 +9,7 @@ accountName	varchar 12	ckh155115
 email		varchar 25	ckh155115@gmail.com
 password	varchar 15	ab151621221
 nickname	varchar 10	sioh0320
+identity        int      1      0 or 1 or 2
 
 貼文 poster
 -------------------
@@ -72,6 +73,19 @@ accountId   	varchar(8)		(accountId,postId)建unique  註:()為同時成立
 postId	  	varchar(12)
 
 rating_action	varchar(30)
+
+
+收藏文章 rating_favorite
+------------------------------
+accountId      varchar(20)    (accountId,postId) unique set ,postId建FK poster
+postId		varchar(12)
+rating_action   varchar(12)
+
+追蹤樓主 rating_follow
+----------------------------
+accountId      varchar(20)    (accountId,acountName) unique set
+authorName	varchar(30)
+rating_action   varchar(12)
 
 
 

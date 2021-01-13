@@ -44,8 +44,8 @@ $(document).ready(function() {
         formData.append("class", $("#sele1").val());
         formData.append("title", $("#title").val());
         formData.append("context", $("#context").val());
-		formData.append("check", $("#check").val());
-		if ($('#check').prop('checked'))formData.append("check", 1);
+		//formData.append("check", $("#check").val());
+		if ($('#checkbox1').prop('checked'))formData.append("check", 1);
 		else formData.append("check", 0);
 
         for (var i = 0; i < inputLength; i++) {

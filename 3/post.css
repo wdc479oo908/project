@@ -17,14 +17,14 @@ body{
 	font-weight: bold;
 	cursor:pointer;
 }
-#s8{
-	position: absolute;
-	left:150px;
-	color: rgb(0,0,0);
-	line-height: 60px;
-	font-size: 24px;
-	font-weight: bold;
-	cursor:pointer;
+#checkbox1{
+
+	margin-top: 18px;
+	margin-left: 950px;
+	/* width: 100px; */
+	/* height: 30px; */
+	/* font-size: 20px; */
+	
 }
 .butt1{
 	width: 40px;
@@ -142,7 +142,7 @@ body{
 }
 #cancel{
 	margin-top: 18px;
-	margin-left: 1125px;
+	margin-left: 50px;
 	width: 100px;
 	height: 30px;
 	font-size: 20px;

@@ -23,5 +23,5 @@
 
 <script type="text/javascript"> 
         alert("刪除成功"); 
-        window.location.href="index.html"; 
+        window.location.href="check_article.html"; 
 </script>

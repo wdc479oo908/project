@@ -57,6 +57,7 @@
         $insertSql = "INSERT INTO member (accountName,birthday,gender,introction) VALUES ('$accountName','$birthday','$gender','$introction')";
         $status = $connect->query($insertSql);
       }
+	       $connect->query("UPDATE poster SET nickname='$nickname'where accountName='$accountName'");
     }
     echo 'update success';
  }

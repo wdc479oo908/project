@@ -57,11 +57,13 @@
 
 	// $tmp_name = $_FILES['myFile']['tmp_name'][0];
 	// $size= $_FILES['myFile']['size'][0];
+	
 	if(isset($_POST["check"])){
 		if($_POST["check"]==1)$nickname="匿名";
 		else    $nickname=$_SESSION['nickname'];
 	}
 	
+
 	$picture = "picture/" . $_FILES["myFile"]["name"][0];
 	$class=$_POST['class'];
 	$title=$_POST['title'];
